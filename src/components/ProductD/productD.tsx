@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./productD.css";
 
@@ -23,6 +23,7 @@ interface ProductResponse {
 function ProductD() {
   const [product, setProduct] = useState<Product | null>(null);
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -40,12 +41,24 @@ function ProductD() {
       });
   }, [id]);
 
+  function handleRedirectProducts() {
+    navigate("/");
+  }
+
   return (
     <div>
       <div className="product-page">
         <div className="container">
           <div className="link-home">
-            <p>Home {">"} Products</p>
+            <p>
+              <span>Home</span> {">"}{" "}
+              <span
+                className="product-page-redirector"
+                onClick={handleRedirectProducts}
+              >
+                Products
+              </span>
+            </p>
           </div>
           {product && product.id && (
             <>

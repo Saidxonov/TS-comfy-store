@@ -35,14 +35,8 @@ function MainLayout({ children }: MainLayoutProps) {
                         isActive ? "active" : "noactive"
                       }
                     >
-                      Home
+                      Products
                     </NavLink>
-                  </li>
-                  <li className="link">
-                    <NavLink to="/about">About</NavLink>
-                  </li>
-                  <li className="link">
-                    <NavLink to="/products">Products</NavLink>
                   </li>
                 </ul>
               </div>

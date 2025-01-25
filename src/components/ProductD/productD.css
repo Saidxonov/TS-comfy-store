@@ -100,3 +100,12 @@
   color: #fff;
   border-radius: 10px;
 }
+
+.product-page-redirector {
+  cursor: pointer;
+}
+
+.product-page-redirector:hover {
+  text-decoration: underline;
+  color: #000;
+}

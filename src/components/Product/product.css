@@ -70,6 +70,43 @@
   column-gap: 30px;
 }
 
-.products {
-  margin-top: 100px;
+.filter-select {
+  width: 200px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+option {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 2px solid lightgray;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
 }
